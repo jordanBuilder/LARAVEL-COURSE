@@ -30,8 +30,17 @@ Route::get('/pizzas', function () {
        'base' => 'thin & crispy'],
 
 ];
-    return view('pizzas',['pizzas' => $pizzas]);   
+    
+    
+    return view('pizzas',['pizzas' => $pizzas,
+    'name' => request('name'),
+    "autreParametre" => request('autreParametre'),
+    'troisiemeParam'=> request('autreParametre'),
+    'quatrieme' => request('quatrieme')
+]);   
 });
+
+
 
 Route::get('/revision',function(){
     $pizzas = [

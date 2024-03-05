@@ -24,7 +24,18 @@
             {{$pizzas[$i]['type']}}
         </p>
         @endfor -->
-
+        <strong>
+            {{$name}}
+        </strong>
+        <strong>
+            {{$autreParametre}}
+        </strong>
+        <strong>
+            {{$troisiemeParam}}
+        </strong>
+        <strong>
+            {{$quatrieme}}
+        </strong>
         @foreach($pizzas as $pizza)
         <div>
             <h2>

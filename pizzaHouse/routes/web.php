@@ -32,3 +32,19 @@ Route::get('/pizzas', function () {
 ];
     return view('pizzas',['pizzas' => $pizzas]);   
 });
+
+Route::get('/revision',function(){
+    $pizzas = [
+        ['type' => 'hawaian',
+         'base' => 'chees crust'    
+     ],
+     
+        ['type' => 'italian',
+        'base' => 'garlic crust'],
+ 
+        ['type' => 'Veg suprem',
+        'base' => 'thin & crispy'],
+ 
+ ];
+    return view('revision',['food'=> $pizzas]);
+});

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PizzaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,51 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+#pizzas view using PizzaController
 
-Route::get('/pizzas', function () {
-    $pizzas = [
-       ['type' => 'hawaian',
-        'base' => 'chees crust'    
-    ],
-    
-       ['type' => 'italian',
-       'base' => 'garlic crust'],
-
-       ['type' => 'Veg suprem',
-       'base' => 'thin & crispy'],
-
-];
-    
-    
-    return view('pizzas',['pizzas' => $pizzas,
-    'name' => request('name'),
-    "autreParametre" => request('autreParametre'),
-    'troisiemeParam'=> request('autreParametre'),
-    'quatrieme' => request('quatrieme')
-]);   
-});
+Route::get('/pizzas',[PizzaController::class,'index']);
 
 
 
-Route::get('/revision',function(){
-    $pizzas = [
-        ['type' => 'hawaian',
-         'base' => 'chees crust'    
-     ],
-     
-        ['type' => 'italian',
-        'base' => 'garlic crust'],
- 
-        ['type' => 'Veg suprem',
-        'base' => 'thin & crispy'],
- 
- ];
-    return view('revision',['food'=> $pizzas]);
-});
+Route::get('/revision',[PizzaController::class,'revisionController']);
 
  
-Route::get('/pizzas/{id}', function ($id) {
-    //use the $id variable to query the db for a record
-     return view('details',['id'=>$id]);      
-});
+Route::get('/pizzas/{id}',[PizzaController::class,'show']);
 

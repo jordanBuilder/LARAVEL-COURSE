@@ -5,6 +5,11 @@ video
 body {
     position: relative;
     font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
 }
 footer {
     position: absolute;
@@ -34,4 +39,24 @@ img{
     p{
         text-align: center;
     }
+}
+
+.pizzaTitle{
+    font-size: 50px;
+    text-align: center;
+    margin:0 auto;
+    text-decoration: none;
+    color: rgb(152, 91, 152);
+    border-bottom: 4px rgb(152, 91, 152) solid;
+    padding: 10px;
+}
+
+.pizzaTitleDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.lesPizzas{
+    display: inline;
 }

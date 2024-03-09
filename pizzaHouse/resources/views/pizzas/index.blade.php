@@ -32,26 +32,11 @@
             {{$quatrieme}}
         </strong>
         @foreach($pizzas as $pizza)
+        
         <div class="lesPizzas">
-            <h2>                            {{$loop->index}}
-                                   
-            {{$pizza['type']}} --
-
-            {{$pizza['base']}}
-
-            @if($loop->first)
-            <span>
-            First in the loop
-            </span>
-            @endif
-
-            @if($loop->last)
-            <span>
-                Last in the loop
-            </span>
-            @endif
-            </h2>
-        </div><br>
+           {{$pizza->name}} -- {{$pizza->type}} --
+           {{$pizza->base}}
+        </div>
         @endforeach
     </div>
 </div>   

@@ -19,44 +19,26 @@ footer {
     color: #fff;
     padding: 10px;
     text-align: center;
+    background-color: gray;
+    
 }
-
-.WelcomeTitle{
-    margin-top: -2px;
-    color: white;
-    letter-spacing: 3px;
-    margin-left: 20px;
-    font-size: 70px;
-    text-transform: uppercase;
-    padding: 12px 0;
-}
-img{
-    width: 400px;
-}
-.firstContainer{
-    display: flex;
-    flex-direction: column;
-    p{
-        text-align: center;
-    }
-}
-
-.pizzaTitle{
-    font-size: 50px;
+.title{
     text-align: center;
-    margin:0 auto;
-    text-decoration: none;
-    color: rgb(152, 91, 152);
-    border-bottom: 4px rgb(152, 91, 152) solid;
-    padding: 10px;
+    font-size:45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+    border-bottom: 3px violet solid;
+    color: rgb(187, 70, 187);
 }
 
-.pizzaTitleDiv{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
+.orderLink{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: rgb(187, 70, 187);
+    margin: auto;
+    justify-content: center;
+    margin: 0 35%;
 
-.lesPizzas{
-    display: inline;
 }

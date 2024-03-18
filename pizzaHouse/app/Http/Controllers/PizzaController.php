@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Models\Pizza;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 
 
 class PizzaController extends Controller
@@ -17,7 +19,11 @@ class PizzaController extends Controller
    // $pizzas = Pizza::orderBy('name','desc')->get(); 
     //$pizzas = Pizza::where('type','hawaien')->get();
     //$pizzas = Pizza::latest()->get();
-    
+    User::create([
+        "name" => "jordan",
+        "email" => "tomegahjordan81@gmail.com",
+        "password"=>Hash::make('0000')
+    ]);
          return view('pizzas.index',['pizzas' => $pizzas,
 
          'name' => request('name'),
@@ -69,8 +75,16 @@ class PizzaController extends Controller
         $pizza->base = request('base');
         
         // $pizza->save();
-        error_log(request('toppings'));
+        $pizza->toppings =  request('toppings');
+        $pizza->save();
          
-      return   redirect('/')->with('msg','thanks for your order');
+      return redirect('/')->with('msg','thanks for your order '); 
+    }
+
+
+    public function destroy($id){
+        $pizza = Pizza::findOrFail($id);
+        $pizza->delete();
+        return redirect('/pizzas');
     }
 } 

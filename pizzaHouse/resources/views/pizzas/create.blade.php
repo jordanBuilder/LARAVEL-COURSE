@@ -1,7 +1,7 @@
 @extends('Layouts.layout')
 
 @section('contenu')
-    <div class="Wrapper create-pizza">
+    <div class="wrapper create-pizza">
        <h1>Create a New Pizza</h1> 
        <form action="/pizzas" method="POST">
         @csrf
@@ -27,10 +27,10 @@
             <label for="">
                 Extra Toppings: </br> 
             </label>
-            <input type="checkbox" name="toppings" value="mushrooms">Mushrooms<br/>
-            <input type="checkbox" name="toppings" value="peppers">Peppers<br/>
-            <input type="checkbox" name="toppings" value="garlic">Garlic<br/>
-            <input type="checkbox" name="toppings" value="olives">Olives<br/>
+            <input type="checkbox" name="toppings[]" value="mushrooms">Mushrooms<br/>
+            <input type="checkbox" name="toppings[]" value="peppers">Peppers<br/>
+            <input type="checkbox" name="toppings[]" value="garlic">Garlic<br/>
+            <input type="checkbox" name="toppings[]" value="olives">Olives<br/>
         </fieldset>
         <input type="submit" value="Order Pizza">
        </form>

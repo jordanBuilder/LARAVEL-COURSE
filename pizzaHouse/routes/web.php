@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PizzaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,5 +30,8 @@ Route::get('/pizzas/{id}',[PizzaController::class,'show']);
 
 
 Route::get('/revision',[PizzaController::class,'revisionController']);
+
+ Route::delete('pizzas/{id}',[PizzaController::class,'destroy']);
+
 
  

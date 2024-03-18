@@ -34,4 +34,4 @@ Route::get('/revision',[PizzaController::class,'revisionController']);
  Route::delete('pizzas/{id}',[PizzaController::class,'destroy']);
 
 
-Route::get('/login',[AuthController::class,'login']);
+Route::get('/login',[AuthController::class,'login'])->name("auth.login");

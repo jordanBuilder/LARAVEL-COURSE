@@ -35,3 +35,4 @@ Route::get('/revision',[PizzaController::class,'revisionController']);
 
 
 Route::get('/login',[AuthController::class,'login'])->name("auth.login");
+Route::post('/login',[AuthController::class,'loginForm'])->name("auth.login");
